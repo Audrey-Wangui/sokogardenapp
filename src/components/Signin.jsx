@@ -74,7 +74,7 @@ const Signin = () => {
   return (
     <div className='row justify-content-center mt-4'>
       <div className="col-md-6 card shadow p-4">
-        <h1>Sign In</h1>
+        <h1 className='text-primary'>Sign In</h1>
         <h5 className="text-info">{loading}</h5>
         <h3 className="text-success">{success}</h3>
         <h4 className="text-danger">{error}</h4>

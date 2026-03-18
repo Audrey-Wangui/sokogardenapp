@@ -6,6 +6,7 @@ import Signup from './components/Signup';
 import Signin from './components/Signin';
 import Notfound from './components/Notfound';
 import 'bootstrap/dist/css/bootstrap.min.css'
+import Makepayment from './components/Makepayment';
 
 function App() {
   return (
@@ -14,6 +15,12 @@ function App() {
       <header className="App-header">
         <h1>Welcome to Sokogarden</h1>
       </header>
+      <nav>
+        <Link to="/" className="btn btn-primary btn-sm m-1">Home</Link>
+        <Link to="/addproducts" className='btn btn-success btn-sm m-1'>Add products </Link>
+        <Link to="/signin" className='btn btn-danger btn-sm m-1'>Signin</Link>
+        <Link to="/signup" className='btn btn-info btn-sm m-1'>Signup</Link>
+      </nav>
 
       {/* Below are our diffrent routes together with the rendered components*/}
       <Routes>
@@ -21,6 +28,7 @@ function App() {
         <Route path='/addproducts' element={<Addproducts />} />
         <Route path='/signup' element={<Signup />} />
         <Route path='/signin' element={<Signin />} />
+        <Route path='/makepayment' element={<Makepayment />} />
         <Route path='*' element={<Notfound />} />
       </Routes>
     </div>

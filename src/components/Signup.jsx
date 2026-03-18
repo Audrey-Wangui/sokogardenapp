@@ -14,7 +14,7 @@ const Signup = () => {
   const[success, setSuccess] = useState("");
   const[error, setError] = useState("");
 
-  // Below is a function thatwill handle the submit action
+  // Below is a function that will handle the submit action
   const handleSubmit = async(e) =>{
     // Below we prevent our site from reloading
     e.preventDefault()
@@ -23,7 +23,7 @@ const Signup = () => {
     setLoading("Please wait as registration is in progress...")
 
     try{
-      // Create a form data object that will enable u to capture thr four details entered on the form
+      // Create a form data object that will enable u to capture the four details entered on the form
       const formdata = new FormData();
 
       //  Insert the four details in terms of key-value pairs
@@ -38,7 +38,7 @@ const Signup = () => {
       // Set back the loading to default
       setLoading("");
 
-      // Just incase everything goes on well, update the success hook with a emssage
+      // Just incase everything goes on well, update the success hook with a message
       setSuccess(response.data.message)
 
       // Clear your hooks
@@ -46,6 +46,10 @@ const Signup = () => {
       setEmail("");
       setPassword("");
       setPhone("");
+
+      setTimeout(() => {
+        setSuccess("");
+      }, 5000);
     }
 
     catch(error){
